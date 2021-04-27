@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        // let obj = {
+        //     name: "ace",
+        //     sayHi: function(){
+        //         console.log('hi');
+        //     }
+        // }
+
+        // es6简写方法
+        // let obj = {
+        //     nickname: "ace",
+        //     sayHi(){
+        //         // this指向方法调用者, 如: a.b()  则b中this指向a
+        //         console.log(this.nickname + ':hi');
+        //         console.log(this);
+        //     }
+        // }
+
+        // window.nickname = 'simba'
+        // // 箭头函数没有自己的arguments和this
+        // let obj1 = {
+        //     nickname: "ace",
+        //     sayHi: ()=>{
+        //         // 箭头函数的this指向window
+        //         console.log(this);
+        //         console.log(this.nickname + ':hi');
+        //     }
+        // }
+        // obj1.sayHi()
+        // obj.sayHi()
+
+
+        // let obj = {
+        //     nickname: 'ace',
+        //     sayHi() {
+        //         console.log(this.nickname + ':hi');
+        //         console.log(this);
+        //     }
+        // }
+
+        // let zz = {
+        //     nickname: 'roger'
+        // }
+        // zz.sayHi = obj.sayHi
+
+        // 谁点的这个方法this 就指向谁
+        // zz.sayHi()
+        
+        // 如果没有显式的调用就相当于window在调用
+        // let xx = zz.sayHi
+        // console.log(xx);
+        // xx()
+
+
+        // function test(){
+        //     console.log('1');
+        // }
+        // console.log(test);
+        // let a1 = test
+        // let a2 = a1
+        // a2()
+
+        let obj = {
+            nickname: 'Simba',
+            age: 20,
+            introduceSelf(){
+                console.log(this);
+                console.log(`你好,我叫${this.nickname},今年${this.age}岁了`);
+            }
+        }
+        
+        let ace = {
+            nickname: 'Ace',
+            age: 30,
+            introduceSelf: obj.introduceSelf
+        }
+
+        obj.introduceSelf()
+        ace.introduceSelf()
+
+        // zz没人点 没人调用
+        let zz = obj.introduceSelf
+        zz()
+    </script>
+</body>
+</html>
