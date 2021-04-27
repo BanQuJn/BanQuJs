@@ -21,18 +21,59 @@
         // let name = obj.name
 
         // 定义一个变量age,从obj中找到age同名属性的值
+        // let {
+        //     age,
+        //     name,
+        //     gender
+        // } = obj
+
+        // console.log(age);
+        // console.log(name);
+        // console.log(gender);
+
+        let age = 10
+        // 之前定义过同样的变量名 名字冲突 起别名
+        // 加冒号后面是定义名, 前面是去对象里面找这个值
         let {
-            age,
+            age: age1,
             name,
             gender
         } = obj
-
-        console.log(age);
-        console.log(name);
-        console.log(gender);
+        console.log(age1);
 
 
-        // 
+        // 数组解构 数组是按顺序走的 访问数组里的下标
+        let arr = [111, 22, 33, 44]
+        // let [a,b,c,d] = arr
+        let [, b, c] = arr
+        console.log(b, c);
+
+
+        let username = 'ace'
+        let password = 123456
+        let type = '管理员'
+
+        let user = {
+            username,
+            password,
+            type
+        }
+
+        let user = {
+            username: username,
+            password: password,
+            type: type
+        }
+
+        let user = {
+            zz: username,
+            aa: password,
+            cc: type
+        }
+
+        console.log(user);
+
+        // 总结: 对象通过属性名解构  数组通过下标解构
     </script>
 </body>
 
