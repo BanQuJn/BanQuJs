@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        // 函数的第一种方法
+        // function a(){
+        //     return 1
+        // }
+
+        // 函数的第二种方法
+        // let b = function(num){
+        //     return num
+        // }
+
+        // 函数的第三种方法
+        // let b = (num,zz) =>{
+        //     return num + zz
+        // }
+
+        // 函数的第四种方法
+        // let b = num =>{
+        //     return num * 20
+        // }
+
+        // 函数的第五种方法
+        // let b = num => num * 20 
+
+        // let a = 10
+        // let b = a
+        // console.log(b);
+
+        // let a = function(num){
+        //     console.log(num);
+        // }
+        // 把a函数赋给b
+        // let b = a
+        // b调用等于a调用
+        // b()
+        // b目前是个函数 把他赋给c
+        // let c = b
+        // c调用等于b调用
+        // c(10)
+
+        // let a = 10
+        let a = function (num) {
+            console.log(num);
+        }
+        // callback  回调函数/高阶函数  将一个函数作为参数传入到另一个函数中执行
+        // 高阶函数: 参数为函数或者返回值为函数的函数成为高阶函数
+        function test(b) {
+            b(10)
+        }
+        test(a)
+
+        // return函数
+        function zz() {
+            let bb = function () {}
+            return bb
+        }
+
+        // 自调用函数 自己调用自己 只执行一次 不可被调用
+        (function () {
+            console.log('aaaa');
+        })()
+    </script>
+</body>
+
+</html>

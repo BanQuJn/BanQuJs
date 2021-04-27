@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var a = 10
+        var b = 20
+        var c = a + b
+        var d = a - b
+        var e = a * b
+        var f = a / b
+        var g = a % b // 取余 4%2=0 4%3=1 4%10=4
+        // console.log(a,b,c,d,e,f,g);
+
+        a = a + 5 // 15
+        console.log(a);
+
+        a += 5 // 20
+        console.log(a);
+
+        a = a - 5 // 15
+        console.log(a);
+
+        a -= 5 // 10
+        console.log(a);
+
+        a += 1 // 11
+        console.log(a);
+
+        a++ // 12
+        console.log(a);
+
+        a-- // 11
+        console.log(a);
+
+        ++a // 12
+        console.log(a);
+
+        --a // 11
+        console.log(a);
+
+        // a++和++a的区别
+        // 独立为一行的没有区别
+        // 先把本行代码走完,是打印11 再++
+        console.log(a++); // 11
+        console.log(a); // 12
+        console.log(1 + a++); // 13 
+        // 因为1 + a并没有把值赋给a
+        console.log(a); // 13
+        console.log(1 + (a++)); // 14
+        console.log(a); // 14
+
+        a += 5 // a = a + 5
+        a -= 5 // a = a - 5
+        a *= 5 // a = a * 5
+        a /= 5 // a = a / 5
+        a %= 5 // a = a % 5
+    </script>
+</body>
+</html>

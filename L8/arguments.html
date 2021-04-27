@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        // 如果没有任何的形参接收,arguments也能接收到
+        // arguments是一个很像数组的对象
+        function zz() {
+            // 指向函数本身
+            console.log(arguments.callee());
+            for (let i = 0; i < arguments.length; i++) {
+                console.log(arguments[i]);
+            }
+            // 但是并不能使用数组方法
+            arguments.join('44')
+        }
+        zz(11, 22, 33)
+    </script>
+</body>
+
+</html>

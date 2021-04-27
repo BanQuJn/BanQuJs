@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        // 3位数的水仙花数
+        // for (let i = 100; i <= 999; i++) {
+        //     let a = parseInt(i / 100)
+        //     let b = parseInt(i % 100 / 10)
+        //     let c = parseInt(i % 10)
+
+        //     // if (a * a * a + b * b * b + c * c * c === i) {
+        //     //     console.log(i);
+        //     // }
+        //     if (Math.pow(a, 3) + Math.pow(b, 3) + Math.pow(c, 3) === i) {
+        //         console.log(i);
+        //     }
+        // }
+
+        // 
+        // for (let i = 1000; i <= 9999; i++) {
+        //     let a = parseInt(i / 1000)
+        //     let b = parseInt(i % 1000 / 100)
+        //     let c = parseInt(i % 100 / 10)
+        //     let d = parseInt(i % 10)
+        //     if (Math.pow(a, 4) + Math.pow(b, 4) + Math.pow(c, 4) + Math.pow(d, 4) === i) {
+        //         console.log(i);
+        //     }
+        // }
+
+        for (let i = 10000; i <= 99999; i++) {
+            let a = parseInt(i / 10000)
+            let b = parseInt(i % 10000 / 1000)
+            let c = parseInt(i % 1000 / 100)
+            let d = parseInt(i % 100 / 10)
+            let e = parseInt(i % 10)
+            if (Math.pow(a, 5) + Math.pow(b, 5) + Math.pow(c, 5) + Math.pow(d, 5) + Math.pow(e, 5) === i) {
+                console.log(i);
+            }
+        }
+
+
+
+        // for (let i = 1000000000; i <= 9999999999; i++) {
+        //     let a = parseInt(i / 1000000000)
+        //     let b = parseInt(i % 1000000000 / 100000000)
+        //     let c = parseInt(i % 100000000 / 10000000)
+        //     let d = parseInt(i % 10000000 / 1000000)
+        //     let e = parseInt(i % 1000000 / 100000)
+        //     let f = parseInt(i % 100000 / 10000)
+        //     let g = parseInt(i % 10000 / 1000)
+        //     let h = parseInt(i % 1000 / 100)
+        //     let k = parseInt(i % 100 / 10)
+        //     let j = parseInt(i % 10)
+        //     if (Math.pow(a, 10) + Math.pow(b, 10) + Math.pow(c, 10) + Math.pow(d, 10) + Math.pow(e, 10) + Math.pow(f,
+        //             10) + Math.pow(g, 10) + Math.pow(h, 10) + Math.pow(k, 10) + Math.pow(j, 10) === i) {
+        //         console.log(i);
+        //     }
+        // }
+    </script>
+</body>
+
+</html>

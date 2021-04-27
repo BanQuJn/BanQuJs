@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        // let obj = {
+        //     age: 10,
+        //     name: 'Simba',
+        //     gender: '男'
+        // }
+
+        // for (const key in obj) {
+        //     console.log(key, obj[key]);
+        // }
+
+        // es6 Object返回对象里面key和value数组
+        // console.log(Object.keys(obj));
+        // console.log(Object.values(obj));
+
+
+        // es6新增 map方法
+        // map利用已有数组 创建一个新的数组
+        // let arr = [11, 22, 33]
+
+        // arr.map(function (item) {
+        //     return item * 2
+        // })
+
+        // function forEach(callback){
+        //     let res = []
+        //     for (let i = 0; i < arr.length; i++) {
+        //         let  data = callback(arr[i])
+        //         res.push(data)
+        //     }
+        //     return res
+        // }
+
+        // let newarr = forEach(function(name,item){
+        //     return { name: "Simba" , age: item}
+        // })
+
+        // console.log(newarr);
+
+
+        let arrn = [{
+                name: "ace",
+                age: 20
+            },
+            {
+                name: "roger",
+                age: 30
+            },
+            {
+                name: "robin",
+                age: 40
+            }
+        ]
+
+        console.log(arrn.map(item => item.name));
+
+        // reduce
+        // let arrs = [11, 22, 33, 44]
+        // let sum = arrs.reduce(function (total, item) {
+        //     return total += item
+        // }, 0)
+        // console.log(sum);
+        console.log(arrs.reduce((total, item) =>total += item, 0));
+        
+
+        let goods = [{
+                name: "薯片",
+                price: 5,
+                count: 2
+            },
+            {
+                name: "可乐",
+                price: 3,
+                count: 4
+            },
+            {
+                name: "辣条",
+                price: 8,
+                count: 5
+            }
+        ]
+        // let sum = 0
+        // goods.map(item => sum += item.price * item.count);
+        // console.log(sum);
+
+        // console.log(goods.reduce(function (total, item) {
+        //     return total + item.price * item.count
+        // }, 0));
+        console.log(goods.reduce((total, item) => total + item.price * item.count, 0));
+    </script>
+</body>
+
+</html>

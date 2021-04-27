@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        //     setInterval(() => {
+        //         let time = new Date()
+
+        //         let end = new Date('2021-04-16 15:00:00')
+
+        //         let sec = (end - time) / 1000
+
+        //         let h = Math.floor(sec / 3600);
+        //         let m = Math.floor((sec % 3600) / 60);
+        //         let s = Math.floor((sec % 3600) % 60);
+
+        //         // 补零
+        //         h = h < 10 ? ('0' + h) : h
+        //         m = m < 10 ? ('0' + m) : m
+        //         s = s < 10 ? ('0' + s) : s
+
+        //         console.log([h, m, s].join(':'));
+        //     }, 1000);
+        // let now = new Date()
+        // console.log(now);
+        // console.log(now.toDateString());
+        // console.log(now.toLocaleDateString());
+        // console.log(now.toLocaleTimeString());
+        // console.log(now.toString());
+        // console.log(now.toTimeString());
+
+
+        function repairZero(num) {
+            return num < 10 ? ('0' + num) : num
+        }
+
+        setInterval(() => {
+            let time = new Date()
+
+            let end = new Date('2021-04-19 12:00:00')
+
+            let sec = (end - time) / 1000
+
+            let h = repairZero(Math.floor(sec / 3600));
+            let m = repairZero(Math.floor((sec % 3600) / 60));
+            let s = repairZero(Math.floor((sec % 3600) % 60));
+            console.log([h, m, s].join(':'));
+        }, 1000);
+    </script>
+</body>
+
+</html>

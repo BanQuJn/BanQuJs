@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        // 解构 ES6语法
+        let obj = {
+            age: 20,
+            name: 'Ace',
+            gender: '男'
+        }
+        // 属性一多 解构很麻烦
+        // let age = obj.age
+        // let name = obj.name
+
+        // 定义一个变量age,从obj中找到age同名属性的值
+        let {
+            age,
+            name,
+            gender
+        } = obj
+
+        console.log(age);
+        console.log(name);
+        console.log(gender);
+
+
+        // 
+    </script>
+</body>
+
+</html>

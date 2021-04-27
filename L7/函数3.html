@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        // let arr = [11, 22, 33, 44, 55,66,22]
+
+        // 函数实现数组原生push方法
+        // function push(val) {
+        //     arr[arr.length] = val
+        // }
+        // push(10)
+        // console.log(arr);
+        // console.log(arr.length);
+
+        // 函数实现数组原生pop方法
+        // function pop(){
+        //     let res = arr[arr.length - 1]
+        //     arr.length --
+        //     return res
+        // }
+        // console.log(pop());
+
+        // 函数实现数组原生unshift方法
+        // function unshift(val){
+        //     // 定义一个变量接收数组长度
+        //     let len = arr.length
+        //     // 循环i从最后一个开始,到下标0
+        //     for (let i = len - 1; i >= 0; i--) {
+        //         // 把前一个的值赋给最后一个
+        //         arr[i + 1] = arr[i]
+        //     }
+        //     // 第一个值等于传进来的值
+        //     arr[0] = val
+        // }
+        // unshift(1)
+        // console.log(arr);
+
+        // 函数实现数组原生shift方法
+        // function shift(){
+        //     let res = arr[0]
+        //     for (let i = 0; i < arr.length; i++) {
+        //         arr[i] = arr[i + 1]                
+        //     }
+        //     arr.length --
+        // }
+        // shift()
+        // console.log(arr);
+
+        // 函数实现数组原生reverse方法
+        // function reverse(){
+        //     let res = arr
+        //     arr = []
+        //     for (let i = res.length - 1; i >= 0; i--) {
+        //         arr[arr.length] = res[i]
+        //     }
+        //     return arr
+        // }
+        // reverse()
+
+        // 老朱
+        // function reverse() {
+        //     let len = arr.length
+        //     for (let i = 0; i < len / 2; i++) {
+        //         if (arr[i] !== arr[len - 1 - i]) {
+        //             let temp = arr[i]
+        //             arr[i] = arr[len - 1 - i]
+        //             arr[len - 1 - i] = temp
+        //         }
+        //     }
+        // }
+        // reverse()
+        // console.log(arr);
+
+        // 函数实现数组原生splice方法
+        // function splice(index, len){
+        //     for (let i = index; i < arr.length; i++) {
+        //         arr[i] = arr[i + len]
+        //     }
+        //     arr.length -= len
+        // }
+
+        // function splice(index, len){
+        //     if(len < 0) throw '请输入合法参数'
+        //     let maxLen = arr.length - index
+        //     if(!len || len > maxLen) len = maxLen
+
+        //     let res = []
+
+        //     for (let i = index; i < arr.length; i++) {
+        //         if(i < index + len) {
+        //             res.push(arr[i])
+        //         }
+        //         arr[i] = arr[i + len]
+        //     }
+        //     arr.length -= len
+        //     return res
+        // }
+        // splice(1, 2)
+
+        // let arr1 = [11, 22, 33]
+
+        // 函数实现数组原生insertAt方法
+        // function insertAt(index, item) {
+        //     let len = arr1.length
+        //     for (let i = arr1.length - 1; i >= index; i--) {
+        //         arr1[i + 1] = arr1[i]
+        //     }
+        //     arr1[index] = item
+        //     console.log(arr1);
+        // }
+        // insertAt(1, 20)
+
+        // 函数实现数组原生concat方法
+        // function concat(newarr){
+        //     let res = []
+        //     arr1.forEach(item => {
+        //         res.push(item)
+        //     });
+        //     newarr.forEach(item => {
+        //         res.push(item)
+        //     });
+        //     return res
+        // }
+        // console.log(concat([1,2,3]));
+
+        // 函数实现数组原生indexOf方法
+        // function indexOf(item){
+        //     let res = -1
+        //     for (let i = 0; i < arr1.length; i++) {
+        //             if(arr1[i] === item){
+        //                 res = i
+        //                 break
+        //             }
+        //     }
+        //     return res
+        // }
+
+        // 函数实现数组原生includes方法
+        // function includes(val) {
+        //     let res = false
+        //     for (let i = 0; i < arr1.length; i++) {
+        //         if (arr1[i] === val) {
+        //             res = true
+        //             break
+        //         }
+        //     }
+        //     return res
+        // }
+        // console.log(includes(11));
+
+        // 函数实现数组原生sort方法
+        // let array = [3, 4, 1, 2, 5]
+
+        // function sort() {
+        //     for (let i = 0; i < array.length - 1; i++) {
+        //         for (let j = 0; j < array.length - i - i; j++) {
+        //             if (array[j] > array[j + 1]) {
+        //                 let temp = array[j]
+        //                 array[j] = array[j + 1]
+        //                 array[j + 1] = temp
+        //             }
+        //         }
+        //     }
+        //     console.log(array);
+        // }
+        // sort()
+    </script>
+</body>
+
+</html>

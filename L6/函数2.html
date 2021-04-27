@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        // 闰年
+        function leapYear(year) {
+            return (year % 4 === 0 && year % 100 !== 0) || year % 400 === 0
+        }
+
+        // 函数实现数组原生join方法
+        let arr = [11, 22, 33, 44, 55]
+
+        function join(code = ',') {
+            let res = ''
+            for (let i = 0; i < arr.length; i++) {
+                console.log(arr[i]);
+                res += arr[i]
+                if (i < arr.length - 1) res += code
+            }
+            return res
+        }
+        let str = join('-')
+        console.log(str);
+
+        // 函数实现数组原生slice方法
+        function slice(start, end) {
+            let res = []
+            for (let i = start; i < end; i++) {
+                res.push(arr[i])
+            }
+            return res
+        }
+        console.log(slice(2, 4));
+
+        
+    </script>
+</body>
+
+</html>

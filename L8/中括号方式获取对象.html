@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        // 对象里特殊的变量名 
+        let obj = {
+            0: 'simba',
+            1: 'ace',
+            2: 'roger',
+            length: 3
+        }
+
+        // 用数组中括号的方式访问
+        console.log(obj[0]);
+        console.log(obj[1]);
+
+        // 对象就是一个特殊的数组,模拟数组遍历对象的值
+        for (let i = 0; i < obj.length; i++) {
+            console.log(obj[i]);
+        }
+    </script>
+</body>
+
+</html>

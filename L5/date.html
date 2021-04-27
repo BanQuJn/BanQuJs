@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        let now = new Date()
+        console.log(now);
+
+        let d1 = new Date(1320921209338)
+        console.log(d1);
+
+        let d2 = new Date('2020-09-09 11:12:31')
+        console.log(d2);
+
+        console.log(d2 - d1);
+
+        // 年月日
+        let ymd = [now.getFullYear(), now.getMonth() + 1, now.getDate()]
+        console.log(ymd);
+
+        // 时分秒
+        let hms = [now.getHours(), now.getMinutes(), now.getSeconds()]
+        console.log(hms);
+
+        // 时间
+        let time = ymd.join('-') + ' ' + hms.join(':')
+        console.log(time);
+
+        // all
+        // let all = [ymd,hms].join(' ')
+        // console.log(all);
+
+        // 定时器,setInterval
+        // setInterval(() => {
+        //     let now = new Date()
+        //     let ymd = [now.getFullYear(), now.getMonth() + 1, now.getDate()]
+        //     let hms = [now.getHours(), now.getMinutes(), now.getSeconds()]
+        //     let time = ymd.join('-') + ' ' + hms.join(':')
+        //     console.log(time);
+        // }, 1000);
+
+        // 星期
+        let week = now.getDay()
+        console.log(week);
+        let str = '星期' + '日一二三四五六'[now.getDay()]
+        console.log(str);
+
+        // switch (now.getDay()) {
+        //     case 0:
+        //         str += '日'
+        //         break;
+        //     case 1:
+        //         str += '一'
+        //         break;
+        //     case 2:
+        //         str += '二'
+        //         break;
+        //     case 3:
+        //         str += '三'
+        //         break;
+        //     case 4:
+        //         str += '四'
+        //         break;
+        //     case 5:
+        //         str += '五'
+        //         break;
+        //     case 6:
+        //         str += '六'
+        //         break;
+        // }
+
+        let d3 = new Date()
+        let d4 = new Date('2020-08-11 16:33:12')
+        // 两个时间相减,得到毫秒数,除以1000换算成秒
+        let sec = (d3 - d4) / 1000
+        if(sec < 60){
+            console.log('刚刚');
+        } else if (sec < 60 * 60){
+            console.log(Math.floor(sec / 60) + "分钟前");
+        } else if (sec < 60 * 60 * 24) {
+            console.log(Math.floor(sec / 60 /60) + "小时前");
+        } else {
+            console.log(new Date(d3 - d4));
+        }
+    </script>
+</body>
+
+</html>

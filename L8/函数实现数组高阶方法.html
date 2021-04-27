@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        let arr = [121, 23, 1212, 2223, 44]
+
+        // forEach
+        function forEach(callback) {
+            for (let i = 0; i < arr.length; i++) {
+                callback(arr[i])
+            }
+        }
+        forEach(function (item) {
+            console.log(item);
+        })
+
+        // filter
+        function filter(callback) {
+            let res = []
+            for (let i = 0; i < arr.length; i++) {
+                let isOk = callback(arr[i])
+                if(isOk) res.push(arr[i])
+            }
+            return res
+        }
+
+        console.log(filter(function (item) {
+            return item > 300
+        }));
+
+        // find
+        function find(callback) {
+            for (let i = 0; i < arr.length; i++) {
+                let isOk = callback(arr[i])
+                if(isOk) return arr[i]
+            }
+        }
+
+        console.log(find(function (item) {
+            return item > 300
+        }));
+
+        // some
+        function some(callback) {
+            for (let i = 0; i < arr.length; i++) {
+                let isOk = callback(arr[i])
+                if(isOk) return true
+            }
+            return false
+        }
+
+        console.log(some(function (item) {
+            return item > 300
+        }));
+
+        // every
+        function every(callback) {
+            for (let i = 0; i < arr.length; i++) {
+                let isOk = callback(arr[i])
+                if(!isOk) return false
+            }
+            return true
+        }
+
+        console.log(every(function (item) {
+            return item > 300
+        }));
+    </script>
+</body>
+
+</html>

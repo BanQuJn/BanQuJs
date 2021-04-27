@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        // console.log('欢迎使用农行ATM');
+
+        // var password = ''
+        // var errorCount = 0
+        // var isSuccess = false
+        // do {
+        //     password = prompt('请输入密码')
+        //     isSuccess = password === '123456'
+        //     if (isSuccess === false) {
+        //         console.log('密码不正确，请重新输入');
+        //         errorCount++
+        //         if (errorCount === 3) {
+        //             console.log('连续错误三次，卡已冻结');
+        //             break
+        //         }
+        //     }
+        // } while (isSuccess === false);
+
+        // if (isSuccess) {
+        //     errorCount = 0
+        //     console.log('登录成功，请选择操作，1.查询 2.取款 3.存款');
+        // } else {
+        //     console.log('登录失败');
+        // }
+
+        var balance = 1000
+
+        var money = 0
+        do {
+            money = prompt('请输入取款金额')
+            if (money === '退出') {
+                console.log('退出成功');
+                break
+
+            }
+            if (isNaN(money)) {
+                console.log('请输入数字');
+            } else {
+                money = parseInt(money)
+                if (money <= 0 || money > balance) {
+                    console.log('金额有误，请重新输入');
+                } else {
+                    balance -= money
+                    console.log('取款成功，当前余额' + balance + '元');
+                }
+            }
+        } while (true);
+    </script>
+</body>
+
+</html>

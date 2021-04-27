@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        // let arr = [11, 22, 33, 44]
+        // // forEach遍历每一个元素
+        // arr.forEach(item => console.log(item * 2))
+
+        // // 代码实现forEach
+        // function forEach(obj) {
+        //     console.log(obj);
+        //     for (let i = 0; i < arr.length; i++) {
+        //         obj(arr[i], i)
+        //     }
+        // }
+        // forEach(function (item, index) {
+        //     console.log(item * 2);
+        // })
+
+        // fitter过滤元素
+        // console.log(arr.filter(item => item % 2 === 0));
+
+        // fitter过滤例子把元素返回出来
+        let arr1 = ['张三', '张无忌', '李四', '王五']
+        // console.log(arr1.filter(item => item.startsWith('张')));
+
+        // 代码实现fitter
+        // let arr2 = []
+        // function fitter(obj) {
+        //     for (let i = 0; i < arr1.length; i++) {
+        //         obj(arr1[i])
+        //     }
+        // }
+        // fitter(function (item) {
+        //     if(item.startsWith('张')){
+        //         arr2.push(item)
+        //     }
+        // })
+        // console.log(arr2);
+
+        // 老朱代码实现filter
+        function filter(){
+            let res = []
+            for (let i = 0; i < arr1.length; i++) {
+                if(arr1[i].includes('张')) res.push(arr1[i])           
+            }
+            return res
+        }
+        console.log(filter());
+
+        // some是否存在符合条件的元素,返回boolean
+        // console.log(arr1.some(item => item.startsWith('张')));
+
+        // every判断数组元素都是符合条件元素
+        // console.log(arr1.every(item => item.length >= 2));
+
+        // find只会返回第一个符合条件的元素
+        // console.log(arr1.find(item => item.startsWith('张')));
+    </script>
+</body>
+
+</html>

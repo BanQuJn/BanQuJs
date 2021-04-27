@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let str = 'http://www.baidu.com?a=10&b=20&c=30'
+        console.log(str.startsWith('http') || str.startsWith('https'));
+
+        let paramsStr = str.split('?')[1]
+        
+        let params = paramsStr.split('&')
+
+        let keywords = 'a'
+
+        for (let i = 0; i < params.length; i++) {
+            // console.log(params[i].split('='));
+            let kv = params[i].split('=')
+            if(kv[0] === keywords){
+                console.log(kv[1]);
+                break;
+            }
+            
+        }
+    </script>
+</body>
+</html>

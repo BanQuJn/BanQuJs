@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        let arr = []
+        for (let i = 1; i <= 102; i++) {
+            arr.push(i)
+        }
+
+        // let pageSize = 10
+        // let pageIndex = 11
+        // console.log('共有' + Math.ceil(arr.length / pageSize) + '页');
+        // let start = (pageIndex - 1) * pageSize
+        // let end = start + pageSize
+        // console.log(arr.slice(start, end));
+
+        function getPageList(pageIndex, pageSize) {
+            console.log('共有' + Math.ceil(arr.length / pageSize) + '页');
+            let start = (pageIndex - 1) * pageSize
+            let end = start + pageSize
+            console.log(arr.slice(start, end));
+        }
+        getPageList(2, 4)
+    </script>
+</body>
+
+</html>

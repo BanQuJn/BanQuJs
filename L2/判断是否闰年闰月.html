@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+
+        // function myTrim(str){
+        //     if(!str) return ''
+        //     else return str
+        // }
+        let year = prompt('请输入一个年份')
+
+        // isNaN 判断输入的值是否是一个数字，
+        if (isNaN(year)) {
+            console.log('请输入一个正确的年份');
+        } else {
+            if ((year % 4 === 0 && year % 100 !== 0) || year % 400 === 0) {
+                console.log(year + '年是闰年');
+            } else {
+                console.log(year + '年不是闰年');
+            }
+        }
+
+
+        // let score = prompt('请输入成绩')
+
+        // if (isNaN(score)) {
+        //     console.log('请输入正确的成绩');
+        // } else {
+        //     if (score === 100) console.log('perfect');
+        //     else if (score >= 90) console.log('great');
+        //     else if (score >= 80) console.log('good');
+        //     else if (score >= 60) console.log('god');
+        //     else console.log('unhappy');
+        // }
+
+        let month = parseInt(prompt('请输入一个月份'))
+
+        if (isNaN(month)) {
+            console.log('请输入正确的月份');
+        } else {
+            console.log(typeof month);
+            if (month === 1 || month === 3 || month === 5 || month === 7 || month === 8 || month === 10 || month ===
+                12) {
+                console.log(year + '年的' + month + '月有31天');
+            } else if (month === 4 || month === 6 || month === 9 || month === 11) {
+                console.log(year + '年的' + month + '月有30天');
+            } else if (month === 2 && ((year % 4 === 0 && year % 100 !== 0) || year % 400 === 0)) {
+                console.log(year + '年的' + month + '月有29天');
+            } else if (month === 2) {
+                console.log(year + '年的' +month + '月有28天');
+            } else {
+                console.log('请输入一个正确的月份');
+            }
+
+        }
+    </script>
+</body>
+
+</html>

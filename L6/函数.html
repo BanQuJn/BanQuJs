@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        // 凡是后面带括号的都是函数
+        // parseInt('1.23') // 1
+        // parseFloat('1.23') // 1.23
+
+        // 使用function定义的函数会预解析,函数提升后会提到顶部,所以可以在任何位置进行调用
+        // var和let定义则不会预解析 先调用则会报错
+        // 定义函数的第一种方法
+        // function sayHi() {
+        //     console.log('hi');
+        // }
+
+        // 定义函数的第二种方法
+        // var sayHello = function () {
+        //     console.log('hello');
+        // }
+
+        // 函数的调用
+        // sayHi()
+
+        // 直接打印sayHi只会打印函数本身
+        // console.log(sayHi);
+
+
+        // a()
+        // 重复定义后面的会把前面的覆盖掉
+        // function a() {
+        //     console.log('a');
+        // }
+
+        // function a() {
+        //     console.log('b');
+        // }
+
+        // let定义则会报错
+        // let a = function () {
+        //     console.log('c');
+        // }
+
+        // var还是会打印d
+        // var a = function () {
+        //     console.log('d');
+        // }
+
+        // 封装
+        // let arr = [11, 22, 33, 44]
+        // let arr1 = [2,333,44,5]
+
+        // function loop() {
+        //     for (let i = 0; i < arr.length; i++) {
+        //         console.log(arr[i]);
+        //     }
+        // }
+        // loop()
+
+        // 带参函数 传一个形参过去
+        // function loop1(value){
+        //     for (let i = 0; i < value.length; i++) {
+        //         console.log(value[i]);
+        //     }
+        // }
+
+        // 调用的时候传一个实参过去
+        // loop1(arr1)
+        // loop1(arr)
+
+        // 吃
+        // function eat(food){
+        //     console.log('小明在吃' + food);
+        // }
+        // eat('蛋糕')
+        // eat('薯片')
+        // eat('鸡块')
+        // eat('肯德基')
+
+        // 喝
+        // function drink(yl){
+        //     console.log('小明在喝' + yl);
+        // }
+        // drink('可乐')
+        // drink('咖啡')
+        // drink('芬达')
+        // drink('雪碧')
+
+        // 付钱
+        // function pay(fee,card){
+        //     if(card === '农业银行') fee -= 10
+        //     console.log(`使用${card}卡付款,共计${fee}元`);
+        // }
+        // pay(100,'中国银行')
+        // pay(40,'农业银行')
+        // pay(70,'招商银行')
+
+        // 带返回值函数
+        // function sum(a, b) {
+        //     let res = a + b
+        //     // 一个函数只能有一个返回值
+        //     return res
+        // }
+        // let res1 = sum(10, 20)
+        // console.log(res1);
+
+        // function a(b){
+        //     // undefined
+        //     console.log(b);
+        // }
+        // // 如果不传参打印出来就是undefined
+        // a()
+
+        // 空传参进行默认
+        // function chu(a,b){
+        //     // throw抛出错误,且后续代码不执行
+        //     if(!b) throw '被除数不能为空'
+        //     return a / b
+        // }
+        // console.log(chu(10));
+
+        
+    </script>
+</body>
+
+</html>

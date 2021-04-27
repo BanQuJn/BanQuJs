@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        // let obj = {
+        //     name:'Simba',
+        //     0: 'Ace',
+        //     a: 20
+        // }
+
+        // // 如果对象中包含此属性,则赋值,如果不包含此属性,则新增此属性
+        // obj.zzz = 30
+        // obj.xxx = 30
+        // obj.name = 'roger'
+
+        // let res = {}
+        // res.a = 1
+        // res.b = 2
+
+        // res.a++
+        // res['a']++
+        // console.log(res.c);
+
+        // let key = 'age'
+
+        // if(res[key] === undefined){
+        //     console.log('没有包含');
+        // }
+
+        let maxCode = {
+            name: '',
+            count: 0
+        }
+
+        let str = 'hello world . i like javascript'
+        let obj = {}
+        for (let i = 0; i < str.length; i++) {
+            if (str[i] !== ' ') {
+                let key = str[i]
+                if (!obj[key]) obj[key] = 1
+                else obj[key]++
+                if (obj[key] > maxCode.count) {
+                    maxCode.name = key
+                    maxCode.count = obj[key]
+                }
+            }
+        }
+        console.log(obj);
+        console.log(`出现次数最多的字符是${maxCode.name},一共出现了${maxCode.count}次`);
+    </script>
+</body>
+
+</html>

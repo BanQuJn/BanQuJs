@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        // 公鸡5块 母鸡3块 小鸡3个1块 问怎么用一百块钱 买一百只鸡
+        for (let i = 0; i < 20; i++) {
+            for (let j = 0; j < 33; j++) {
+                for (let k = 0; k < 100; k++) {
+                    if (i + j + k === 100 && i * 5 + j * 3 + k / 3 === 100) {
+                        console.log(`公鸡${i}，母鸡${j}，小鸡${k}`);
+                    }
+                }
+            }
+        }
+    </script>
+</body>
+
+</html>

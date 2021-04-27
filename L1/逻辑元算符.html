@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var a = true
+        var b = false
+
+
+        // 判断两个值是否都为true,如果都为true,才是true,否则就是false,必须同时满足
+        console.log(a && b);
+
+        // 判断有一个满足,只要一个为true就为true
+        console.log(a || b);
+
+        // 使用或者‘||’来并列的话,如果前面的条件满足了,后面的条件就不会再判断了
+        console.log(2 > 1 || 10 > 2);
+
+        // 使用‘&&’与并且运算符，如果前面的条件满足了，则走后面的，如果前面的不满足，则后面的也不执行
+        console.log(2 > 1 && 10 > 2);
+        
+        // 非  取反 即 !true=>false    !false=>true
+        console.log(!true);
+
+        
+    </script>
+</body>
+</html>

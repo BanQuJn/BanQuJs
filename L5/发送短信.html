@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let template = '尊敬的{tel}用户,恭喜您获得本公司最高{money}万的贷款额度,请尽快领取'
+        let telList = ['1111111','22222222','33333333']
+        for (let i = 0; i < telList.length; i++) {
+            let msg = template.replace('{tel}',telList[i])
+            msg = msg.replace('{money}',Math.round(Math.random() * 90) + 10)
+            console.log(msg);
+        }
+    </script>
+</body>
+</html>

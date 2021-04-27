@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        // 定义一个变量接收相差日期
+        let total = 0
+
+        // 定义一个开始年份的剩余天数
+        let startYearTotal = 0
+
+        // 定义一个结束年份天数
+        let endYearTotal = 0
+
+        // 输入开始年份
+        let year = parseInt(prompt('请输入开始年份'))
+
+        // 输入开始月份
+        let month = parseInt(prompt('请输入开始月份'))
+
+        // 循环判断闰月的情况，计算开始月份的天数
+        for (let i = 0; i < month; i++) {
+            if (isNaN(month)) {
+                console.log('请输入正确的月份');
+            } else {
+                if (i === 1 || i === 3 || i === 5 || i === 7 || i === 8 || i === 10 || i === 12) {
+                    startYearTotal += 31
+                } else if (i === 4 || i === 6 || i === 9 || i === 11) {
+                    startYearTotal += 30
+                } else if (i === 2 && ((year % 4 === 0 && year % 100 !== 0) || year % 400 === 0)) {
+                    startYearTotal += 29
+                } else if (i === 2) {
+                    startYearTotal += 28
+                } else {
+                    console.log('请输入一个正确的月份');
+                }
+            }
+        }
+
+        // 定义一个开始的日期
+        let date = parseInt(prompt('请输入开始日期'))
+
+        // 开始的月份的日期
+        startYearTotal += date
+
+        // 定义一个结束年份
+        let endYear = parseInt(prompt('请输入一个结束年份'))
+
+        // 定义一个结束月份
+        let endMonth = parseInt(prompt('请输入一个结束月份'))
+
+        // 循环计算结束年份的天数
+        for (let i = 1; i <= endMonth - 1; i++) {
+            if (isNaN(endMonth)) {
+                console.log('请输入正确的月份');
+            } else {
+                if (i === 1 || i === 3 || i === 5 || i === 7 || i === 8 || i === 10 || i === 12) {
+                    endYearTotal += 31
+                } else if (i === 4 || i === 6 || i === 9 || i === 11) {
+                    endYearTotal += 31
+                } else if (i === 2 && ((endYear % 4 === 0 && endYear % 100 !== 0) || endYear % 400 === 0)) {
+                    endYearTotal += 29
+                } else if (i === 2) {
+                    endYearTotal += 28
+                } else {
+                    console.log('请输入一个正确的月份');
+                }
+            }
+        }
+
+        // 定义一个结束日期
+        let endDate = parseInt(prompt('请输入一个结束日期'))
+
+        // 定义一个循环变量
+        let startI = parseInt(year) + 1
+
+        // 循环计算total值
+        for (let i = startI; i < endYear; i++) {
+            if ((i % 4 === 0 && i % 100 !== 0) || i % 400 === 0) {
+                total += 366
+            } else {
+                total += 365
+            }
+        }
+
+        // 判断开始年份是否是闰年计算剩余天数
+        if ((year % 4 === 0 && year % 100 !== 0) || year % 400 === 0) {
+            total = total + (366 - startYearTotal)
+        } else {
+            total = total + (365 - startYearTotal)
+        }
+
+        // 加上结束年份的天数
+        endYearTotal += endDate
+        total += endYearTotal
+        console.log(`从${year}年${month}月${date}号开始，到${endYear}年${endMonth}月${endDate}号，相差了${total}天`);
+    </script>
+</body>
+</html>

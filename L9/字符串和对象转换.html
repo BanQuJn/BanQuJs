@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        // 将'a=1&b=2&c=3' 变成{a:1,b:2,c:3}
+        // let str = 'a=1&b=2&c=3'
+        // let args = str.split('&')
+        // let obj = {}
+        // args.forEach(item => {
+        //     let kv = item.split('=')
+        //     let key = kv[0]
+        //     let val = kv[1]
+        //     obj[key] = val
+        // });
+        // console.log(obj);
+
+        // 将{a:1,b:2,c:3} 变成'a=1&b=2&c=3'
+        let obj = {
+            a: 1,
+            b: 2,
+            c: 3
+        }
+
+        function stringify(obj) {
+            let arr = []
+            for (let key in obj) {
+                let val = obj[key]
+                let str = [key, val].join('=')
+                arr.push(str)
+            }
+            return arr.join('&')
+        }
+
+        function stringify(obj) {
+            let arr = []
+            Object.keys(obj).forEach(function(key){
+                let val = obj[key]
+                let str = [key, val].join('=')
+                // let str = key + '=' + val
+                arr.push(str)
+            })
+            return arr.join('&')
+        }
+
+        function stringify(obj) {
+            let arr = Object.keys(obj).map(function(key){
+                let val = obj[key]
+                let str = [key, val].join('=')
+                return str
+            })
+            return arr.join('&')
+        }
+
+        function stringify(obj) {
+            let arr = Object.keys(obj).map(function(key){
+                return key + '=' + obj[key]
+            })
+            return arr.join('&')
+        }
+        
+        function stringify(obj) {
+            let arr = Object.keys(obj).map(key =>{
+                return key + '=' + obj[key]
+            })
+            return arr.join('&')
+        }
+
+        function stringify(obj) {
+            let arr = Object.keys(obj).map(key => key + '=' + obj[key])
+            return arr.join('&')
+        }
+
+        function stringify(obj) {
+            return Object.keys(obj).map(key => key + '=' + obj[key]).join('&')
+        }
+
+        
+        let stringify = obj => Object.keys(obj).map(key => key + '=' + obj[key]).join('&')
+        
+    </script>
+</body>
+
+</html>
