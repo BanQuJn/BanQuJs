@@ -71,6 +71,9 @@
         // let a2 = a1
         // a2()
 
+        // window是js自己提供的大对象 window里面有name
+        console.log(window);
+
         let obj = {
             nickname: 'Simba',
             age: 20,
@@ -92,6 +95,11 @@
         // zz没人点 没人调用
         let zz = obj.introduceSelf
         zz()
+
+
+        // 使用var定义的变量或者方法, 都会默认成为window的属性
+        // var age = 20
+        // console.log(window);
     </script>
 </body>
 </html>

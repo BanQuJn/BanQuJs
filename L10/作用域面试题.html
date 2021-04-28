@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        // let nickname = 'Ace'
+        // let obj = {
+        //     nickname: 'Simba',
+        //     introduceSelf() {
+        //         // 打印是找作用域里面的变量方法
+        //         console.log(nickname);
+        //         // this点出来的是对象的方法
+        //         console.log(`你好,我叫${this.nickname}`);
+        //     }
+        // }
+        // obj.introduceSelf()
+
+        // let obj = {
+        //     nickname: 'Simba',
+        //     introduceSelf() {
+        //         console.log(`你好,我叫${this.nickname}`);
+        //         return function() {
+        //             console.log(`早上好,我叫${this.nickname}`);
+        //         }
+        //     }
+        // }
+        // let res = obj.introduceSelf()
+        // res()
+
+
+        let nickname = 'Ace'
+        let obj = {
+            nickname: 'Simba',
+            introduceSelf() {
+                let nickname = 'Roger'
+                // 谁点的this,就去谁里面找属性名
+                console.log(`你好,我叫${this.nickname}`);
+                // 如果传一个参数,参数相当于局部变量
+                // return function (var nickname = undefined) {
+                return function (nickname) {
+                    // 在return出去前,他会找本作用域是否有定义的变量,没有就一直往上,找到后先打印
+                    console.log(nickname);
+                    // 函数被return出去 此时的this就是window点,window里没有nickname所有undefined
+                    console.log(`早上好,我叫${this.nickname}`);
+                }
+            }
+        }
+        obj.introduceSelf()()
+
+    </script>
+</body>
+
+</html>

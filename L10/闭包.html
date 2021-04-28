@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        // 函数只执行一次,函数自执行
+        (function () {
+            console.log('12');
+        }())
+
+        // js函数执行完 会自动销毁函数里所定义的变量
+        function z() {
+            let zzz = 20
+            return zzz
+        }
+
+        console.log(z());
+
+        // 闭包函数, 两个作用域嵌套  内部的函数  引用了外部的变量  则内部函数成为了外部的闭包函数
+        // 因为b里面的用到了i i此时被占用了 所以不会被销毁,变量不会被释放
+        // function a(){
+        //     let i = 0
+        //     function b(){
+        //         i++
+        //         return i
+        //     }
+        //     return b
+        // }
+        // let b = a()
+        // console.log(b());
+        // console.log(b());
+
+        // 闭包实例
+        // let num = 0
+
+        // function jia() {
+        //     num++
+        // }
+
+        // function jian() {
+        //     num--
+        // }
+
+        // function get() {
+        //     return num
+        // }
+
+        // jia()
+        // jia()
+        // jia()
+        // console.log(get());
+
+        // jian()
+        // console.log(get());
+
+        // function get(){
+        //     let num = 0
+        //     function jia(){
+        //         num++
+        //         return num
+        //     }
+        //     function jian(){
+        //         num--
+        //         return num
+        //     }
+        //     return num
+        // }
+
+        let calc = function(){
+            let num = 0 // 一直没有释放掉
+            return {
+                jia(){
+                    num++
+                },
+                jian(){
+                    num--
+                },
+                get(){
+                    return num
+                }
+            }
+        }
+        let c = calc()
+        c.jia()
+        let d = calc()
+        // d调用不会影响到c 每一次调用都相当于创建了一次新的函数
+        d.jia()
+        console.log(c.get());
+        console.log(c);
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+
+        // 作用域  变量所依赖的生存环境
+        function zz() {
+            // a在函数中已经被定义 变量提升原则此时的a存在但没有值所以undefined
+            console.log(a);
+            var a = 20
+            // 先从本作用域查找,找不到则去上级查找,找到则停止 所以此时的a为20
+            console.log(a);
+        }
+        // 本作用域已经有a所以 会打印110 
+        // 本作用域没有a了 window也没有所以会报错
+        console.log(a);
+        zz()
+    </script>
+</body>
+
+</html>
